@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <title>JS Native Drag&Drop</title>
+</head>
+<body>
+<div class="content">
+    <div class="filter">
+        <div class="filter__title">Category:</div>
+        <select class="filter__categories"
+                disabled
+                id="filter-categories"
+                onchange="onCategoriesChange(event.target.value)">
+            <option selected value="all">all</option>
+        </select>
+    </div>
+    <div class="take-n-elements">
+        <div class="take-n-elements__title">Take N elements</div>
+        <input class="take-n-elements__number"
+               id="take-n-elements"
+               max="30"
+               min="0"
+               oninput="onTakeNElementsValueChange()"
+               type="number"
+               value="10">
+    </div>
+    <ul class="products" id="products">
+    </ul>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
